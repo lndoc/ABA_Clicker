@@ -132,13 +132,23 @@ function spawnFloatingText(amount) {
     document.body.appendChild(float);
 
     const rect = abaImage.getBoundingClientRect();
-    float.style.left = `${rect.left + rect.width / 2}px`;
-    float.style.top = `${rect.top}px`;
+
+    const offsetX = Math.random() * rect.width - rect.width / 2;
+    const offsetY = Math.random() * rect.height - rect.height / 2;
+
+    float.style.position = 'absolute';
+    float.style.left = `${rect.left + rect.width / 2 + offsetX}px`;
+    float.style.top = `${rect.top + rect.height / 2 + offsetY}px`;
+
+    float.style.transition = 'transform 1s ease-out, opacity 1s';
+    float.style.transform = 'translateY(-20px)';
+    float.style.opacity = '0';
 
     setTimeout(() => {
         float.remove();
     }, 1000);
 }
+
 
 abaImage.addEventListener('click', () => {
     abaCount += abaPerClick;
