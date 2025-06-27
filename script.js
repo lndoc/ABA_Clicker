@@ -14,7 +14,7 @@ const upgrades = [
     { name: 'Grimmjow', baseCost: 1000, abaPerClick: 10, passiveAba: 1 },
     { name: 'Aizen', baseCost: 5000, abaPerClick: 50, passiveAba: 5 },
     { name: 'Yoruichi', baseCost: 10000, abaPerClick: 100, passiveAba: 10 },
-    { name: 'PTS Luffy', baseCost: 25000, abaPerClick: 1000, passiveAba: 50 },
+    { name: 'PTS Luffy', baseCost: 25000, abaPerClick: 1000, passiveAba: 20 },
     { name: 'TS Luffy', baseCost: 50000, abaPerClick: 500, passiveAba: 50 },
     { name: 'PTS Naruto', baseCost: 100000, abaPerClick: 1000, passiveAba: 100 },
     { name: 'Nameku', baseCost: 500000, abaPerClick: 5000, passiveAba: 500 },
