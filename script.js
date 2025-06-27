@@ -147,10 +147,19 @@ abaImage.addEventListener('click', () => {
     saveGame();
 });
 
+let lastUpdateTime = Date.now();
+
 setInterval(() => {
-    abaCount += passiveAbaPerSecond / 10;
+    const now = Date.now();
+    const deltaSeconds = (now - lastUpdateTime) / 1000;
+    lastUpdateTime = now;
+
+    abaCount += passiveAbaPerSecond * deltaSeconds;
+    abaCount = Math.round(abaCount * 10) / 10;
+
     updateDisplay();
 }, 100);
+
 
 function saveGame() {
     const saveData = {
