@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ABA Clicker</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>ABA Clicker</h1>
+    </header>
+
+    <main>
+      <section class="click-area">
+        <img id="abaImage" src="ABAImage.png" alt="ABA Coins" />
+      </section>
+
+      <section class="stats">
+        <p><strong>ABA Coins:</strong> <span id="abaCount">0</span></p>
+        <p><strong>ABA Coins per Click:</strong> <span id="abaPerClick">1</span></p>
+        <p><strong>ABA Coins/Sec:</strong> <span id="passiveAba">0</span></p>
+      </section>
+
+      <section class="upgrades">
+        <h2>Upgrades</h2>
+      </section>
+
+      <div class="save-controls">
+        <button onclick="saveGame()">Save Data</button>
+        <button onclick="loadGame(); updateDisplay()">Load Data</button>
+        <button onclick="resetGame()">Reset Data</button>
+        <button onclick="exportGame()">Export Data</button>
+        <button onclick="importGame()">Import Data</button>
+
+        <div id="exportPopup" class="export-popup" style="display:none;">
+          <p>Copy your save data:</p>
+          <textarea id="jsonArea" readonly></textarea>
+          <button onclick="copyExportedData()">Export</button>
+          <button onclick="closeExportPopup()">Close</button>
+        </div>
+
+        <div id="importPopup" class="export-popup" style="display:none;">
+          <p>Paste your save data:</p>
+          <textarea id="jsonImportArea" placeholder="Paste data here."></textarea>
+          <div style="margin-top:10px;">
+            <button onclick="confirmImportData()">Import</button>
+            <button onclick="closeImportPopup()">Close</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 ABA Clicker</p>
+    </footer>
+  </div>
+<div id="tooltip" class="upgrade-tooltip"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
