@@ -141,8 +141,6 @@ main {
 }
 
 .upgrades-scroll::-webkit-scrollbar-thumb {
-  background: url('your-image-url.png') no-repeat center;
-  background-size: contain;
   border-radius: 6px;
   background-color: rgba(255, 204, 0, 0.8);
 }
