@@ -5,7 +5,7 @@ let passiveAbaPerSecond = 0;
 const abaImage = document.getElementById('abaImage');
 const abaCountDisplay = document.getElementById('abaCount');
 const abaPerClickDisplay = document.getElementById('abaPerClick');
-const upgradesContainer = document.querySelector('.upgrades');
+const upgradesContainer = document.querySelector('.upgrades-scroll');
 const passiveAbaDisplay = document.getElementById('passiveAba');
 
 const upgrades = [
