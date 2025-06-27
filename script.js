@@ -32,7 +32,6 @@ const upgrades = [
 
 function nameToFilename(name) {
     const fileName = name.replace(/[^a-zA-Z0-9]/g, '_') + '.png';
-    console.log(`https://lndoc.github.io/ABA_Clicker/upgrade_images/${fileName}`);
     return `https://lndoc.github.io/ABA_Clicker/upgrade_images/${fileName}`;
 }
 
@@ -250,7 +249,7 @@ document.addEventListener('DOMContentLoaded', () => {
     updateDisplay();
 });
 
-setInterval(saveGame, 5000); 
+setInterval(saveGame, 500); 
 
 document.querySelectorAll("*").forEach(el => {
     el.style.touchAction = "manipulation";
