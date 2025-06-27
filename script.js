@@ -31,8 +31,11 @@ const upgrades = [
 
 
 function nameToFilename(name) {
-    return 'upgrade_images/' + name.toLowerCase().replace(/[^a-z0-9]/g, '_') + '.png';
+    const fileName = name.replace(/[^a-zA-Z0-9]/g, '_') + '.png';
+    return `https://lndoc.github.io/ABA_Clicker/upgrade_images/${fileName}`;
 }
+
+
 
 upgrades.forEach(upg => {
     upg.image = nameToFilename(upg.name);
