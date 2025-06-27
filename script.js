@@ -9,24 +9,34 @@ const upgradesContainer = document.querySelector('.upgrades');
 const passiveAbaDisplay = document.getElementById('passiveAba');
 
 const upgrades = [
-    { name: 'ABA Chan', baseCost: 10, abaPerClick: 0, passiveAba: 1, image: 'https://static.wikia.nocookie.net/animebattlearenaaba/images/0/02/ABA_Chan.png/revision/latest?cb=20230823193536' },
-    { name: 'PTS Ichigo', baseCost: 100, abaPerClick: 1, passiveAba: 0.1, image: 'https://static.wikia.nocookie.net/animebattlearenaaba/images/3/3e/Ichigo.png/revision/latest?cb=20200214021355' },
-    { name: 'Grimmjow', baseCost: 1000, abaPerClick: 10, passiveAba: 1, image: 'https://static.wikia.nocookie.net/animebattlearenaaba/images/e/ee/GrimmjowBase.png/revision/latest?cb=20211225151354' },
-    { name: 'Aizen', baseCost: 5000, abaPerClick: 50, passiveAba: 5, image: 'https://static.wikia.nocookie.net/animebattlearenaaba/images/6/69/Unknown_%2848%29.png/revision/latest?cb=20200607182320' },
-    { name: 'Yoruichi', baseCost: 10000, abaPerClick: 100, passiveAba: 10, image: 'https://static.wikia.nocookie.net/animebattlearenaaba/images/7/79/Yoruichilook.PNG/revision/latest?cb=20210501122404' },
-    { name: 'PTS Luffy', baseCost: 25000, abaPerClick: 1000, passiveAba: 50, image: 'https://static.wikia.nocookie.net/animebattlearenaaba/images/3/3d/Luffy.png/revision/latest?cb=20200212190829' },
-    { name: 'PTS Luffy', baseCost: 50000, abaPerClick: 500, passiveAba: 50, image: 'https://static.wikia.nocookie.net/animebattlearenaaba/images/5/56/TS_luffy.PNG/revision/latest?cb=20200604060217' },
-    { name: 'PTS Naruto', baseCost: 100000, abaPerClick: 1000, passiveAba: 100, image: 'https://static.wikia.nocookie.net/animebattlearenaaba/images/e/ea/Naruto.png/revision/latest?cb=20200212234650' },
-    { name: 'Nameku', baseCost: 500000, abaPerClick: 5000, passiveAba: 500, image: 'https://static.wikia.nocookie.net/animebattlearenaaba/images/8/81/New_Goku_Skin_1.png/revision/latest?cb=20230201060418' },
-    { name: 'PTS Sasuke', baseCost: 1000000, abaPerClick: 10000, passiveAba: 1000, image: 'https://static.wikia.nocookie.net/animebattlearenaaba/images/7/77/PTS_Sasuke_.png/revision/latest?cb=20250215030949' },
-    { name: 'Android Vegeta', baseCost: 2000000, abaPerClick: 20000, passiveAba: 2000, image: 'https://static.wikia.nocookie.net/animebattlearenaaba/images/8/84/Vegeta_Skin_1.png/revision/latest?cb=20230402084519' },
-    { name: 'PTS Zoro', baseCost: 5000000, abaPerClick: 20000, passiveAba: 10000, image: 'https://static.wikia.nocookie.net/animebattlearenaaba/images/b/b8/Zoro.PNG/revision/latest?cb=20200325195704' },
-    { name: 'TS Zoro', baseCost: 5000000, abaPerClick: 50000, passiveAba: 5000, image: 'https://static.wikia.nocookie.net/animebattlearenaaba/images/4/48/ZoroS1.png/revision/latest?cb=20220827000102' },
-    { name: 'Saitama', baseCost: 10000000, abaPerClick: 100000, passiveAba: 10000, image: 'https://static.wikia.nocookie.net/animebattlearenaaba/images/1/12/Screen_Shot_2021-03-24_at_1.09.40_PM.png/revision/latest?cb=20210324171208' },
-    { name: 'Tanjiro', baseCost: 20000000, abaPerClick: 200000, passiveAba: 20000, image: 'https://static.wikia.nocookie.net/animebattlearenaaba/images/6/61/Tanjiro.png/revision/latest?cb=20200824190824' },
-    { name: 'Nanami', baseCost: 100000000, abaPerClick: 2500000, passiveAba: 100000, image: 'https://static.wikia.nocookie.net/animebattlearenaaba/images/c/c9/Nanamibase.png/revision/latest?cb=20241226040857' },
+    { name: 'ABA Chan', baseCost: 10, abaPerClick: 0, passiveAba: 1 },
+    { name: 'PTS Ichigo', baseCost: 100, abaPerClick: 1, passiveAba: 0.1 },
+    { name: 'Grimmjow', baseCost: 1000, abaPerClick: 10, passiveAba: 1 },
+    { name: 'Aizen', baseCost: 5000, abaPerClick: 50, passiveAba: 5 },
+    { name: 'Yoruichi', baseCost: 10000, abaPerClick: 100, passiveAba: 10 },
+    { name: 'PTS Luffy', baseCost: 25000, abaPerClick: 1000, passiveAba: 50 },
+    { name: 'TS Luffy', baseCost: 50000, abaPerClick: 500, passiveAba: 50 },
+    { name: 'PTS Naruto', baseCost: 100000, abaPerClick: 1000, passiveAba: 100 },
+    { name: 'Nameku', baseCost: 500000, abaPerClick: 5000, passiveAba: 500 },
+    { name: 'PTS Sasuke', baseCost: 1000000, abaPerClick: 10000, passiveAba: 1000 },
+    { name: 'Android Vegeta', baseCost: 2000000, abaPerClick: 20000, passiveAba: 2000 },
+    { name: 'PTS Zoro', baseCost: 5000000, abaPerClick: 20000, passiveAba: 10000 },
+    { name: 'TS Zoro', baseCost: 5000000, abaPerClick: 50000, passiveAba: 5000 },
+    { name: 'Saitama', baseCost: 10000000, abaPerClick: 100000, passiveAba: 10000 },
+    { name: 'Tanjiro', baseCost: 20000000, abaPerClick: 200000, passiveAba: 20000 },
+    { name: 'Nanami', baseCost: 100000000, abaPerClick: 2500000, passiveAba: 100000 },
+    { name: 'SnakeWorl', baseCost: 10000000000000, abaPerClick: 0, passiveAba: 0 }
 
 ];
+
+
+function nameToFilename(name) {
+    return 'upgrade_images/' + name.toLowerCase().replace(/[^a-z0-9]/g, '_') + '.png';
+}
+
+upgrades.forEach(upg => {
+    upg.image = nameToFilename(upg.name);
+});
 
 let upgradeCounts = {};
 
@@ -45,7 +55,7 @@ function createUpgradeButton(upgrade) {
     const button = document.createElement('button');
     const cost = getCost(upgrade);
 
-    button.innerHTML = `<img src="${upgrade.image}" alt="" width="50"> ${upgrade.name} - ${cost} ABA`;
+    button.innerHTML = `<img src="${upgrade.image}" alt="" width="50"> ${upgrade.name} - ${formatNum(cost)} ABA`;
 
     button.addEventListener('click', () => {
         const cost = getCost(upgrade);
@@ -56,7 +66,7 @@ function createUpgradeButton(upgrade) {
             upgradeCounts[upgrade.name] = (upgradeCounts[upgrade.name] || 0) + 1;
             updateDisplay();
             saveGame();
-            button.innerHTML = `<img src="${upgrade.image}" alt="" width="50"> ${upgrade.name} - ${getCost(upgrade)} ABA`;
+            button.innerHTML = `<img src="${upgrade.image}" alt="" width="50"> ${upgrade.name} - ${formatNum(getCost(upgrade))} ABA`;
         } else {
             alert('Not enough ABA Coins!');
         }
@@ -67,10 +77,10 @@ function createUpgradeButton(upgrade) {
         const count = upgradeCounts[upgrade.name] || 0;
         tooltip.innerHTML = 
             `${upgrade.name}\n` +
-            `Cost: ${getCost(upgrade)} ABA\n` +
-            `+${upgrade.abaPerClick} ABA/Click\n` +
-            `+${upgrade.passiveAba} ABA/Sec\n` +
-            `Owned: ${count}`;
+            `Cost: ${formatNum(getCost(upgrade))} ABA\n` +
+            `+${formatNum(upgrade.abaPerClick)} ABA/Click\n` +
+            `+${formatNum(upgrade.passiveAba)} ABA/Sec\n` +
+            `Owned: ${formatNum(count)}`;
         tooltip.style.display = 'block';
     });
 
@@ -89,6 +99,7 @@ function createUpgradeButton(upgrade) {
 }
 
 
+
 function getCost(upgrade) {
     const count = upgradeCounts[upgrade.name] || 0;
     return Math.round(upgrade.baseCost * Math.pow(1.15, count));
@@ -101,8 +112,15 @@ function updateDisplay() {
 }
 
 function formatNum(num) {
-    return num >= 1000 ? num.toLocaleString() : num.toFixed(2);
+    if (num >= 1e6) {
+        return num.toExponential(3); 
+    } else if (num >= 1000) {
+        return num.toLocaleString();
+    } else {
+        return num.toFixed(2); 
+    }
 }
+
 
 function spawnFloatingText(amount) {
     const float = document.createElement('div');
