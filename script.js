@@ -250,3 +250,23 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 setInterval(saveGame, 5000); 
+
+document.querySelectorAll("*").forEach(el => {
+    el.style.touchAction = "manipulation";
+});
+
+const observer = new MutationObserver(mutations => {
+    mutations.forEach(mutation => {
+        mutation.addedNodes.forEach(node => {
+            if (node.nodeType === Node.ELEMENT_NODE) {
+                node.style.touchAction = "manipulation";
+
+                node.querySelectorAll("*").forEach(child => {
+                    child.style.touchAction = "manipulation";
+                });
+            }
+        });
+    });
+});
+
+observer.observe(document.body, { childList: true, subtree: true });
